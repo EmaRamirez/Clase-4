@@ -1,0 +1,15 @@
+@model List<Movie>
+
+@{
+
+}
+<h3>Top 10 de peliculas de herramientas de programacion</h3>
+
+<ol>
+    @foreach (var item in Model)
+    {
+        <li><a asp-action="Detail" asp-route-id="@item.Code"> @item.Name </a></li>
+    }
+</ol>
+
+<a asp-action="Create" class="btn btn-light">Nueva peli</a>
